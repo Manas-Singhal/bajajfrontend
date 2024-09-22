@@ -58,58 +58,59 @@ function App() {
         <
         button className = "submit-btn"
         type = "submit"
-        onClick = { handleSubmit } > Submit < /button> <
-        /div>
+        onClick = { handleSubmit } > Submit < /button> < /
+        div >
 
         {
             error && < p className = "error-msg"
             style = {
-                { color: 'red' } } > { error } < /p>}
+                { color: 'red' }
+            } > { error } < /p>}
 
             {
                 isSubmitted && responseData && ( <
-                    >
-                    <
-                    div className = "user-details" >
-                    <
-                    h3 > User Details < /h3> <
-                    p > < strong > User ID: < /strong> {responseData.user_id}</p >
-                    <
-                    p > < strong > Email: < /strong> {responseData.email}</p >
-                    <
-                    p > < strong > Roll Number: < /strong> {responseData.roll_number}</p >
-                    <
-                    /div>
+                        >
+                        <
+                        div className = "user-details" >
+                        <
+                        h3 > User Details < /h3> <
+                        p > < strong > User ID: < /strong> {responseData.user_id}</p >
+                        <
+                        p > < strong > Email: < /strong> {responseData.email}</p >
+                        <
+                        p > < strong > Roll Number: < /strong> {responseData.roll_number}</p >
+                        <
+                        /div>
 
-                    <
-                    div className = "file-details" >
-                    <
-                    h3 > File Details < /h3> <
-                    p > < strong > File Valid: < /strong> {responseData.file_valid ? 'Yes' : 'No'}</p >
-                    <
-                    p > < strong > File MIME Type: < /strong> {responseData.file_mime_type}</p >
-                    <
-                    p > < strong > File Size(KB): < /strong> {responseData.file_size_kb}</p >
-                    <
-                    /div>
+                        <
+                        div className = "file-details" >
+                        <
+                        h3 > File Details < /h3> <
+                        p > < strong > File Valid: < /strong> {responseData.file_valid ? 'Yes' : 'No'}</p >
+                        <
+                        p > < strong > File MIME Type: < /strong> {responseData.file_mime_type}</p >
+                        <
+                        p > < strong > File Size(KB): < /strong> {responseData.file_size_kb}</p >
+                        <
+                        /div>
 
-                    <
-                    div className = "dropdown-container" >
-                    <
-                    label > Select Filter: < /label> <
-                    select multiple = { true }
-                    onChange = { handleOptionChange } >
-                    <
-                    option value = "alphabets" > Alphabets < /option> <
-                    option value = "numbers" > Numbers < /option> <
-                    option value = "highest_lowercase_alphabet" > Highest Lowercase Alphabet < /option> <
-                    /select> <
-                    /div>
+                        <
+                        div className = "dropdown-container" >
+                        <
+                        label > Select Filter: < /label> <
+                        select multiple = { true }
+                        onChange = { handleOptionChange } >
+                        <
+                        option value = "alphabets" > Alphabets < /option> <
+                        option value = "numbers" > Numbers < /option> <
+                        option value = "highest_lowercase_alphabet" > Highest Lowercase Alphabet < /option> < /
+                        select > <
+                        /div>
 
-                    <
-                    div className = "response-container" >
-                    <
-                    h3 > Filtered Response < /h3> {
+                        <
+                        div className = "response-container" >
+                        <
+                        h3 > Filtered Response < /h3> {
                         selectedOptions.includes('alphabets') && ( <
                             p > < strong > Alphabets: < /strong> {JSON.stringify(responseData?.alphabets)}</p >
                         )
@@ -122,12 +123,12 @@ function App() {
                             p > < strong > Highest Lowercase Alphabet: < /strong> {JSON.stringify(responseData?.highest_lowercase_alphabet)}</p >
                         )
                     } <
-                    /div> <
-                    />
-                )
-            } <
-            /div>
-        );
-    }
+                    /div> < /
+                    >
+            )
+        } <
+        /div>
+    );
+}
 
-    export default App;
+export default App;
